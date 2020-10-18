@@ -1,6 +1,7 @@
 package com.mukscode.springmvc;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -16,8 +17,8 @@ public class StudentController {
 	@Value("#{countryOptions}")
 	private Map<String, String> countryOptions;
 	
-	@Value("#{favoriteLanguageOption}")
-	private Map<String,String> favoriteLanguageOption;
+	@Value("#{'${favoriteLanguageOption}'.split(',')}")
+	private List<String> favoriteLanguageOption;
 	
 	@Value("#{operatingSystemFromFile}")
 	private Map<String,String> operatingSystems;

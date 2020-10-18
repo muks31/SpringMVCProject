@@ -16,9 +16,11 @@
 
 	<!-- Adding the Country Option properties file -->
 	<util:properties id="countryOptions" location="classpath:../countries.properties"/>
-	
+		
 	<!-- Adding the favoriteLanguage option properties file -->
-	<util:properties id="favoriteLanguageOption" location="classpath:../favoriteLanguageOption.properties" />
+	<!--  <util:properties id="favoriteLanguageOption" location="classpath:../favoriteLanguageOption.properties" /> -->
+	 <context:property-placeholder location = "classpath:../favoriteLanguageOption.properties"/>
+	
 	
 	<!-- Adding operating systems properties file -->
 	<util:properties id="operatingSystemFromFile" location="classpath:../operatingSystems.properties" />
